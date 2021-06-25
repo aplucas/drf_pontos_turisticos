@@ -1,4 +1,4 @@
-from rest_framework.authentication import TokenAuthentication, BasicAuthentication
+from rest_framework.authentication import TokenAuthentication, SessionAuthentication
 from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
 from rest_framework.permissions import IsAuthenticated
@@ -11,7 +11,7 @@ from core.models import PontoTuristico
 
 class PontoTuristicoViewSet(ModelViewSet):
     serializer_class = PontoTuristicoSerializer
-    authentication_classes = (BasicAuthentication, TokenAuthentication,)
+    authentication_classes = [TokenAuthentication, SessionAuthentication, ]
     permission_classes = (IsAuthenticated,)
     filter_backends = [SearchFilter]
     search_fields = ['nome', 'descricao', 'endereco__linha1']
