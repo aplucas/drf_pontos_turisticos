@@ -33,8 +33,8 @@ class PontoTuristicoViewSet(ModelViewSet):
     def list(self, request, *args, **kwargs):
         return super(PontoTuristicoViewSet, self).list(self, request, *args, **kwargs)
 
-    def create(self, request, *args, **kwargs):
-        return super(PontoTuristicoViewSet, self).create(self, request, *args, **kwargs)
+    # def create(self, request, *args, **kwargs):
+    #     return super(PontoTuristicoViewSet, self).create(self, request, *args, **kwargs)
 
     def destroy(self, request, *args, **kwargs):
         return super(PontoTuristicoViewSet, self).destroy(self, request, *args, **kwargs)
