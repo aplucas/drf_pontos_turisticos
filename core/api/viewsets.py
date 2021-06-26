@@ -42,11 +42,11 @@ class PontoTuristicoViewSet(ModelViewSet):
     def retrieve(self, request, *args, **kwargs):
         return super(PontoTuristicoViewSet, self).retrieve(self, request, *args, **kwargs)
 
-    def update(self, request, *args, **kwargs):
-        return super(PontoTuristicoViewSet, self).update(self, request, *args, **kwargs)
+    # def update(self, request, *args, **kwargs):
+    #     return super(PontoTuristicoViewSet, self).update(self, request, *args, **kwargs)
 
-    def partial_update(self, request, *args, **kwargs):
-        return super(PontoTuristicoViewSet, self).partial_update(self, request, *args, **kwargs)
+    # def partial_update(self, request, *args, **kwargs):
+    #     return super(PontoTuristicoViewSet, self).partial_update(self, request, *args, **kwargs)
 
     @action(methods=['post', 'get'], detail=True)
     def denuciar(self, request, pk=None):
